@@ -18,13 +18,6 @@ response = requests.get(url)
 # Check if the request was successful
 
 def check_temp_week():
-    sender_email = "thomas.vdn96@gmail.com"
-    receiver_email = "thomas.vdniad@gmail.com"
-    password = input("Type your password and press enter: ")
-    message = MIMEText("This is a plain text email.")
-    message["Subject"] = "Plain Text Email"
-    message["From"] = sender_email
-    message["To"] = receiver_email
     url = f'http://api.openweathermap.org/data/2.5/weather?q=Brussels&appid={api_key}'
     response = requests.get(url)
     if response.status_code == 200:
